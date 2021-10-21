@@ -1,18 +1,14 @@
 ----------------------
 INSTALLATION
 
-In Terminal
-
-
-
-----------------------
-START
-
 Open Terminal
 cd notebooks
 jupyter trust *.ipynb
 
+Adjust available RAM in Docker if "exited with code 134" error crashes the Jupyter container
 
+----------------------
+START
 
 # In the terminal 1
 export DEMO_PATH="/Users/ksatola/git/ds-workbench"
