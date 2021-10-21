@@ -1,6 +1,13 @@
 ----------------------
 INSTALLATION
 
+In the HOST
+Authorize to docker.com before executing make
+docker login
+
+Make sure the proper docker architecture is used (amd64/arm64) for M1 or Intel/AMD architecture
+
+
 Open Terminal
 cd notebooks
 jupyter trust *.ipynb
