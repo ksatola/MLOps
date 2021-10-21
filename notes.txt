@@ -1,0 +1,55 @@
+----------------------
+INSTALLATION
+
+In Terminal
+
+
+
+----------------------
+START
+
+Open Terminal
+cd notebooks
+jupyter trust *.ipynb
+
+
+
+# In the terminal 1
+export DEMO_PATH="/Users/ksatola/git/ds-workbench"
+cd $DEMO_PATH
+make
+docker ps
+
+Jupyter: http://127.0.0.1:8888/?token=6fb9f736371a0781ab27cbfd1b2d2a8afdacdcaea29bb3f2
+
+MLflow: http://127.0.0.1:5000/#/
+
+# When finished
+
+control+C
+
+cd $DEMO_PATH
+make down
+# or CTRL+C
+
+
+----------------------
+clean demo folders
+
+export DEMO_PATH="/Users/ksatola/git/ds-workbench"
+cd $DEMO_PATH
+rm -rf data/artifacts/*
+rm -rf data/db/*
+rm -rf data/custom_models/*
+find data/data_pipeline -maxdepth 2 -type f -delete
+find data/performance_monitoring -maxdepth 1 -type f -delete
+find data/training_pipeline -maxdepth 2 -type f -delete
+
+# Clear notebooks output cells
+cd notebooks
+jupyter nbconvert --clear-output --inplace *.ipynb
+
+Remove Docker containers
+
+
+-------------------------
