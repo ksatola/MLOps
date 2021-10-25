@@ -7,3 +7,4 @@ satellite
 __pycache__/
 
 venv/*
+data/*
